@@ -2,6 +2,7 @@
   --bg-dark-blue: #203040;
   --text-white: #ffffff;
   --text-oringe: #ff8000;
+  --text-black: #404040;
 
   --card-bg-color: #f8f8f8;
   --card-border-color: #c0c0c0;
@@ -124,6 +125,10 @@ img.medium {
 .rating span {
   color: var(--icon-star-color);
   margin: 0.1rem;
+}
+
+.rating span:last-child {
+  color: var(--text-black);
 }
 
 .row.center {

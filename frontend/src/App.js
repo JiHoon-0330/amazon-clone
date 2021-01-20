@@ -1,3 +1,4 @@
+import Product from "./components/Product";
 import { data } from "./data";
 function App() {
   return (
@@ -16,37 +17,8 @@ function App() {
       <main>
         <div className="row center">
           {Object.keys(data.products).map(key => {
-            const { id, name, image, price, rating } = data.products[key];
-            return (
-              <div key={id} className="card">
-                <a href={`/product/${id}`}>
-                  <img className="medium" src={image} alt={name} />
-                </a>
-                <div className="card-body">
-                  <a href={`/product/${id}`}>
-                    <h2>{name}</h2>
-                  </a>
-                  <div className="rating">
-                    <span>
-                      <i className="fa fa-star"></i>
-                    </span>
-                    <span>
-                      <i className="fa fa-star"></i>
-                    </span>
-                    <span>
-                      <i className="fa fa-star"></i>
-                    </span>
-                    <span>
-                      <i className="fa fa-star"></i>
-                    </span>
-                    <span>
-                      <i className="fa fa-star"></i>
-                    </span>
-                  </div>
-                  <div className="price">${price}</div>
-                </div>
-              </div>
-            );
+            console.log(data.products[key]);
+            return <Product key={key} product={data.products[key]} />;
           })}
         </div>
       </main>
