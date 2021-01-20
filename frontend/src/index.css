@@ -65,16 +65,23 @@ ul {
 li {
   margin-top: 1rem;
 }
-
+input,
+select,
+textarea,
 button {
   padding: 1rem;
   border-radius: 0.5rem;
   border: 0.1rem solid var(--button-border);
   font-size: 1.6rem;
+}
+button {
   background-color: var(--button-bg-color);
   cursor: pointer;
 }
 
+input:hover,
+select:hover,
+textarea:hover,
 button:hover {
   border: 0.1rem solid var(--border-black);
 }
