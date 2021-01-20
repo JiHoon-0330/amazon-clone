@@ -11,7 +11,7 @@ const HomeScreen = props => {
   const { loading, error, products } = productList;
   useEffect(() => {
     dispatch(listProducts());
-  }, []);
+  }, [dispatch]);
 
   return (
     <div>
