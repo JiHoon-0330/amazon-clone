@@ -1,7 +1,10 @@
-import React from "react";
-import { useLocation, useParams } from "react-router-dom";
+import React, { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { useParams } from "react-router-dom";
+import { addToCart } from "../actions/cartActions";
 
 const CartScreen = props => {
+  const dispatch = useDispatch();
   const { id } = useParams();
   const { search } = props.location;
   let qty = null;
@@ -13,6 +16,12 @@ const CartScreen = props => {
         param.split("=")[0] === "qty" && (qty = Number(param.split("=")[1]));
       });
   }
+
+  useEffect(() => {
+    if (id) {
+      dispatch(addToCart(id, qty));
+    }
+  }, [dispatch, id, qty]);
 
   return (
     <div>
