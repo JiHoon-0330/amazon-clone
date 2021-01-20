@@ -1,0 +1,131 @@
+:root {
+  --bg-dark-blue: #203040;
+  --text-white: #ffffff;
+  --text-oringe: #ff8000;
+
+  --card-bg-color: #f8f8f8;
+  --card-border-color: #c0c0c0;
+
+  --icon-star-color: #f0c040;
+}
+
+#root {
+  height: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* 1rem을 10px로 맞추기 */
+  font-size: 62.5%;
+}
+
+body {
+  height: 100vh;
+  font-size: 1.6rem;
+  font-family: Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+  font-size: 1.8rem;
+  padding: 1rem 0;
+}
+h2 {
+  font-size: 1.6rem;
+  padding: 1rem 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--text-oringe);
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  grid-template-columns: 1fr;
+  grid-template-rows: 5rem 1fr 5rem;
+  height: 100%;
+}
+
+header {
+  grid-area: header;
+  background-color: var(--bg-dark-blue);
+}
+main {
+  grid-area: main;
+  padding: 1rem;
+}
+
+footer {
+  grid-area: footer;
+  background-color: var(--bg-dark-blue);
+  color: var(--text-white);
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header a {
+  color: var(--text-white);
+  padding: 1rem;
+}
+
+a.brand {
+  color: var(--text-white);
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+img {
+  border-radius: 0.5rem;
+}
+
+img.medium {
+  max-width: 29rem;
+  width: 100%;
+}
+
+.card {
+  border: 0.1rem solid var(--card-border-color);
+  background-color: var(--card-bg-color);
+  border-radius: 0.5rem;
+  margin: 1rem;
+}
+
+.card-body {
+  padding: 1rem;
+}
+
+.card-body > * {
+  margin-bottom: 0.5rem;
+}
+
+.price {
+  font-size: 2rem;
+}
+
+.rating span {
+  color: var(--icon-star-color);
+  margin: 0.1rem;
+}
+
+.row.center {
+  justify-content: center;
+}
